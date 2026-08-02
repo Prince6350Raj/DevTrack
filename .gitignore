@@ -1,0 +1,22 @@
+# Dependency folders
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Local env files
+.env
+client/.env
+server/.env
+
+# Local upload files
+server/uploads/
+
+# Build outputs
+client/dist/
+
+# Editor / OS temporary files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.gemini/

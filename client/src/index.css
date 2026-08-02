@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root, .theme-light {
+    --color-primary: #3b82f6;       /* Blue 500 */
+    --color-primary-hover: #2563eb; /* Blue 600 */
+    --color-bg: #f8fafc;            /* Slate 50 */
+    --color-card: #ffffff;          /* White */
+    --color-text: #0f172a;          /* Slate 900 */
+    --color-muted: #64748b;         /* Slate 500 */
+    --color-border: #e2e8f0;        /* Slate 200 */
+    --color-accent: #f1f5f9;        /* Slate 100 */
+  }
+
+  .theme-dark {
+    --color-primary: #6366f1;       /* Indigo 500 */
+    --color-primary-hover: #4f46e5; /* Indigo 600 */
+    --color-bg: #09090b;            /* Zinc 950 */
+    --color-card: #18181b;          /* Zinc 900 */
+    --color-text: #fafafa;          /* Zinc 50 */
+    --color-muted: #a1a1aa;         /* Zinc 400 */
+    --color-border: #27272a;        /* Zinc 800 */
+    --color-accent: #202023;        /* Slightly lighter zinc */
+  }
+
+  .theme-blue {
+    --color-primary: #0ea5e9;       /* Sky 500 */
+    --color-primary-hover: #0284c7; /* Sky 600 */
+    --color-bg: #0a1128;            /* Midnight blue */
+    --color-card: #101f42;          /* Slate-navy */
+    --color-text: #e2e8f0;          /* Slate 200 */
+    --color-muted: #94a3b8;         /* Slate 400 */
+    --color-border: #1e293b;        /* Slate 800 */
+    --color-accent: #1e293b;
+  }
+
+  .theme-green {
+    --color-primary: #10b981;       /* Emerald 500 */
+    --color-primary-hover: #059669; /* Emerald 600 */
+    --color-bg: #021a14;            /* Dark forest green */
+    --color-card: #042a22;          /* Emerald card */
+    --color-text: #e6f4ea;          /* Mint light */
+    --color-muted: #82a89f;         /* Pale mint */
+    --color-border: #0b453a;        /* Teal border */
+    --color-accent: #0b453a;
+  }
+
+  .theme-purple {
+    --color-primary: #a855f7;       /* Purple 500 */
+    --color-primary-hover: #9333ea; /* Purple 600 */
+    --color-bg: #100720;            /* Dark violet */
+    --color-card: #1c0e35;          /* Deep violet card */
+    --color-text: #f3e8ff;          /* Light purple */
+    --color-muted: #c084fc;         /* Muted purple */
+    --color-border: #3b1767;        /* Violet border */
+    --color-accent: #3b1767;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Outfit', 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Glassmorphism custom classes */
+.glass-effect {
+  background: rgba(var(--color-card), 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
